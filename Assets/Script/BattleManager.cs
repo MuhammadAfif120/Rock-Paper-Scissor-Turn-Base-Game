@@ -93,7 +93,7 @@ public class BattleManager : MonoBehaviour
                     {
                         /*
                             Loser menerima damage sebesar attack power dari winner
-                            konco lawas
+                            dijak dolan
                         */
                         loser.TakeDamage(winner.SelectedCharacter.AttackPower);
                     }
