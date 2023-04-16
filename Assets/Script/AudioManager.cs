@@ -13,6 +13,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource bgm;
     [SerializeField] AudioSource sfx;
 
+    public bool IsMute{ get => bgm.mute; }
+    public float BgmVolume { get => bgm.volume; }
+    public float SfxVolume { get => sfx.volume; }
+
 
 
     private void Start() {
@@ -104,8 +108,17 @@ public class AudioManager : MonoBehaviour
         sfx.mute = value;
     }
 
-    public void setVolume(float value)
+    //  Fungsi untuk set playerpref BGM di options settings
+    public void setBgmVolume(float value)
     {
-        
+        bgm.volume = value;
+
+    }
+
+    //  Fungsi untuk set playerpref Sfx di options settings
+    public void setSfxVolume(float value)
+    {
+        sfx.volume = value;
+
     }
 }
